@@ -1,0 +1,33 @@
+Ketikan perintah dibawah ini di terminal VPS Linux Anda:
+
+1. sudo apt-get update && sudo apt-get dist-upgrade  -> Tekan Enter tunggu sampai selesai
+2. sudo reboot -> Tekan enter, dan ketika reboot (restart) putty langsung close, buka putty lg dan masuk ke terminal VPS linux
+3. apt-get install screen -> untuk mining agar berjalan terus meski putty disconnect
+4. screen -R [nama screen Anda bebas, sebaiknya yg gampang di ingat] -> Tekan enter 2x, masukan scrip di bawah ini jangan lupa isi/edit dengan wallet anda dan nama workernya:
+
+# Donwload CPU Miner (SUGAR)
+wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz
+
+# extrak file
+tar xf cpuminer-opt-linux.tar.gz 
+
+# Run Mining
+while [ 1 ]; do
+./cpuminer-sse2 -a yespowersugar -o stratum+tcps://stratum-na.rplant.xyz:17042 -u sugar1qgxyakkwcwszt4t0urrchkkwyhp4674svk0hdwm.Tod -t2
+
+sleep 2
+done
+
+# selesai
+
+5. Selamat!!!! mining sudah jalan di VPS, skrng bisa di close putty nya.
+6. Lalu buka https://pool.rplant.xyz klik sugarchain ditab sebelah kiri web
+7. Masukan alamat Wallet Anda di "MyMiner" klik tombol set.
+9. Untuk melihat mining kita masuk lg ke putty diterminal gunakan perintah screen -r [nama screen Anda] -> Tekan enter maka Anda akan melihat miner sedang berjalan.
+
+Note:
+screen -R (menggunakan huruf besar) digunakan untuk membuat nama screen, sedangkan screen -r (menggunakan huruf kecil) digunakan unutuk melihat screen yg telah kita buat. Jd harus diperhatikan hurf besar dan kecilnya karena bersifat case sensitif.
+
+Kontak ( Hanya WA ):
+Sugi
+0823 1146 0909
